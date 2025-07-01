@@ -56,5 +56,3 @@ def simulate_delay_splitting(added_delay, delayed_flight_id):
     
     
     return cost
-
-display()
