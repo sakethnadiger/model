@@ -22,7 +22,8 @@ Assumptions made:
 
  - An exceptional delay is a delay over 3 hours. This increases the cost exponentially because passengers are entitled to compensation for delays above 3 hours
 
-1. Create a graph with nodes representing airports and edges representing flights. These edges can be weighted with the cost of the flight.
+Create a graph with nodes representing airports and edges representing flights. These edges can be weighted with the cost of the flight.
+
 Model hourly cost as $2000, so cost of the flight is 2000 * duration
 Simple model with four flights
 JFK → LHR : 7.2 hours
@@ -34,7 +35,9 @@ Using python networkx and matplotlib pyplot
 
 After discussing this strategy, it has been established that the costs of flying are constants in this particular problem, because the hourly cost can not be optimised and has to be incurred regardless of circumstances
 
-2. Simulate a delay and split it between two flights originating from the same airport
+Simulate a delay and split it between two flights originating from the same airport
+
+
 Add more flights from the same airport
 Calculate a cost relating to delay using a non linear function
 Split the delay and calculate new cost to compare to before
@@ -82,5 +85,5 @@ What could be improved in the future and next steps that can be taken:
  - Introducing a larger input set of data for more accurate results.
 
  - Mixed Integer Linear Programming, or Linear Programming in general, had been looked into to determine whether a swap of aircraft is optimal. This is a set of mathematical inequalities and expressions which are provided with a set of constraints, and must be solved. This can be solved with many commercial solvers. However, this proved to be too complicated for the scope of the project
- 
+
  - Another optimisation algorithm is the Minimax algorithm. This is an algorithm which is well known for its use in strategic games, primarily known for its use in chess. This is an algorithm in which a certain aspect of the program has to be minimised or maximised. In this case, the delay needs to be minimised, or alternatively flight scheduling efficiency needs to be optimised. The algorithm uses a tree like structure to look into future worst case scenarios, and determine the most optimal path to traverse.
